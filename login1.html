@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Cổng thông tin sinh viên Qúi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 1. Thiết lập nền và bố cục chung */
+        body { 
+            margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; 
+            background: url('219d55a625b5a4ebfda4 (1).jpg') center/cover fixed; 
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+        
+        .main-layout { display: flex; gap: 30px; max-width: 900px; width: 95%; align-items: stretch; }
+        .intro-side h2 { color: #2384b9; margin: 0 0 15px 0; font-size: 22px; }
+        .info-item { margin-bottom: 12px; font-size: 15px; line-height: 1.5; }
+        .info-item i { color: #2384b9; width: 25px; }
+        .badge { background: #2384b9; color: white; padding: 3px 10px; border-radius: 15px; font-size: 12px; margin-right: 5px; }
+
+        /* 3. Cột Đăng nhập (Giống ảnh bạn chụp) */
+        .login-side { 
+            width: 340px; background: rgba(255,255,255,0.9); padding: 30px 20px; 
+            border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .logo-tvu { width: 140px; margin-bottom: 20px; }
+        .input-box { position: relative; margin-bottom: 15px; }
+        .input-box i { position: absolute; left: 12px; top: 13px; color: #666; }
+        .input-box input { 
+            width: 100%; padding: 12px 10px 12px 40px; border: 1px solid #ccc; 
+            border-radius: 6px; outline: none; transition: 0.3s;
+            box-sizing: border-box;
+        }
+        .input-box input:focus { border-color: #2384b9; box-shadow: 0 0 5px rgba(35,132,185,0.2); }
+        
+        /* 4. Nút bấm */
+        .btn { 
+            width: 100%; padding: 12px; border: none; border-radius: 6px; 
+            color: #fff; font-weight: bold; cursor: pointer; margin-bottom: 10px; 
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .btn-login { background: linear-gradient(to bottom, #34a8da, #2384b9); }
+        .btn-news { background: #17a2b8; }
+        .btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .login-side { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-side">
+        <img src="logo.jpg" class="logo-tvu" alt="Logo TVU">
+        <form>
+            <div class="input-box">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Mã số SV ">
+            </div>
+            <div class="input-box">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="Mật khẩu">
+            </div>
+            
+            <button type="button" class="btn btn-login">
+                <i class="fa fa-sign-in-alt"></i> Đăng nhập hệ thống
+            </button>
+            <button type="button" class="btn btn-news">
+                <i class="fa fa-bullhorn"></i> Xem tin tức và thông báo
+            </button>
+            <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Trở về trang chủ</a>
+        </li></ul>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thế Giới Di Động</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#f3f3f3;
+}
+
+/* THANH ĐỎ TRÊN CÙNG */
+
+.top-banner{
+    width:100%;
+    height:45px;
+    background:red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+}
+
+/* HEADER MÀU VÀNG */
+
+.header{
+    width:100%;
+    background:#ffd500;
+    padding:15px 40px;
+}
+
+/* HÀNG ĐẦU */
+
+.header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+    font-size:35px;
+    font-weight:bold;
+    color:black;
+}
+
+/* Ô TÌM KIẾM */
+
+.search-box{
+    width:500px;
+    height:40px;
+    border:none;
+    border-radius:20px;
+    padding-left:20px;
+    font-size:16px;
+}
+
+/* MENU BÊN PHẢI */
+
+.menu-right{
+    display:flex;
+    gap:25px;
+    font-size:18px;
+}
+
+/* MENU DANH MỤC */
+
+.category{
+    margin-top:15px;
+    display:flex;
+    gap:30px;
+    font-size:18px;
+}
+
+/* BANNER LỚN */
+
+.big-banner{
+    width:80%;
+    height:300px;
+    background:orange;
+    margin:25px auto;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:45px;
+    font-weight:bold;
+}
+
+/* KHUYẾN MÃI */
+
+.sale-title{
+    width:80%;
+    margin:auto;
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* KHUNG SẢN PHẨM */
+
+.product-container{
+    width:80%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+/* THẺ SẢN PHẨM */
+
+.product{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+/* HIỆU ỨNG */
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+/* ẢNH */
+
+.product img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+}
+
+/* TÊN */
+
+.product h3{
+    margin-top:10px;
+    font-size:20px;
+}
+
+/* GIÁ */
+
+.price{
+    color:red;
+    font-size:28px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+<ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Trở về trang chủ</a>
+        </li></ul>
+<!-- THANH ĐỎ -->
+
+<div class="top-banner">
+    THỨ TƯ SALE SẬP SÀN GIẢM ĐẾN 50%
+</div>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <!-- HÀNG TRÊN -->
+
+    <div class="header-top">
+
+        <div class="logo">
+            Thế giới di động
+        </div>
+
+        <input type="text" class="search-box" placeholder="Bạn tìm gì?...">
+
+        <div class="menu-right">
+            <div>Đăng nhập</div>
+            <div>Giỏ hàng</div>
+            <div>Hồ Chí Minh</div>
+        </div>
+
+    </div>
+    <!-- DANH MỤC -->
+
+    <div class="category">
+        <div>Điện thoại</div>
+        <div>Laptop</div>
+        <div>Phụ kiện</div>
+        <div>Smartwatch</div>
+        <div>Đồng hồ</div>
+        <div>Tablet</div>
+        <div>Máy cũ,thu cũ</div>
+        <div>Máy hình,máy in</div>
+        <div>Sim,thẻ cào</div>
+        <div>Dịch vụ,tiện ích</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- BANNER LỚN -->
+ <!-- KHUNG MÀU CAM -->
+<div class="banner">
+    <img src="tgdd.jpg" alt="thế giới di động">
+</div>
+
+<style>
+/* KHUNG MÀU CAM */
+.banner{
+    width: 80%;
+    height: 300px;
+    background: orange;
+    margin: 20px auto;
+    border-radius: 20px;
+
+    /* canh giữa hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HÌNH ẢNH */
+.banner img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.banner{
+    width: 1000px;        /* chiều rộng khung */
+    height: 300px;        /* chiều cao khung */
+    margin: 20px auto;
+    border-radius: 20px; /* bo góc */
+    overflow: hidden;    /* hình không tràn ra ngoài */
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* hình nằm gọn trong khung */
+}
+</style>
+
+<!-- TIÊU ĐỀ -->
+
+<div class="sale-title">
+    Khuyến mãi online
+</div>
+
+<!-- DANH SÁCH SẢN PHẨM -->
+
+<div class="product-container">
+
+    <!-- SẢN PHẨM 1 -->
+
+    <div class="product">
+        <img src="iphone-15-pro-max.png">
+
+        <h3>iPhone 15 Pro Max</h3>
+
+        <div class="price">
+            26.990.000đ
+        </div>
+    </div>
+
+    <!-- SẢN PHẨM 2 -->
+
+    <div class="product">
+        <img src="samsunga35.jpg">
+
+        <h3>Samsung A35</h3>
+
+        <div class="price">
+            6.350.000đ
+        </div>
+    </div>
+
+    <!-- SẢN PHẨM 3 -->
+
+    <div class="product">
+        <img src="laptophp1.webp">
+
+        <h3>Laptop HP</h3>
+
+        <div class="price">
+            15.390.000đ
+        </div>
+    </div>
+
+    <!-- SẢN PHẨM 4 -->
+
+    <div class="product">
+        <img src="huawei.webp">
+
+        <h3>Huawei Band 10</h3>
+
+        <div class="price">
+            590.000đ
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin đăng ký</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-header {
+            background-color: #7FA04B; /* Màu xanh lá của tiêu đề */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .form-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .form-group.align-top {
+            align-items: start;
+        }
+
+        label {
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Định dạng các ô input text, date, select giống trong ảnh (chỉ có border-bottom) */
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #999;
+            padding: 6px 0;
+            outline: none;
+            font-size: 14px;
+            color: #333;
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        /* Group dành riêng cho Radio và Checkbox */
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        /* File input */
+        input[type="file"] {
+            font-size: 14px;
+        }
+
+        /* Textarea mô tả */
+        textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #999;
+            padding: 8px;
+            outline: none;
+            resize: none;
+            font-size: 14px;
+        }
+
+        /* Khu vực nút bấm */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: #7FA04B; /* Màu nút Hủy bỏ trong ảnh giống màu theme */
+            opacity: 0.9;
+        }
+
+        .btn-submit {
+            background-color: #55752B; /* Màu nút Đăng ký đậm hơn một chút */
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-header">
+        Thông tin đăng ký
+    </div>
+    
+    <form class="form-body">
+        <div class="form-group">
+            <label for="fullname">Họ tên:</label>
+            <input type="text" id="fullname" placeholder="Nhập họ tên">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob">
+        </div>
+
+        <div class="form-group">
+            <label>Giới tính:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" placeholder="Nhập địa chỉ">
+        </div>
+
+        <div class="form-group">
+            <label for="student-id">MSSV:</label>
+            <input type="text" id="student-id" placeholder="Nhập mã số sinh viên">
+        </div>
+
+        <div class="form-group">
+            <label for="class">Lớp:</label>
+            <select id="class">
+                <option value="DA25TTC">DA25TTC</option>
+                <option value="DA25TTB">DA25TTB</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Nhập email">
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Ảnh đại diện:</label>
+            <input type="file" id="avatar">
+        </div>
+
+        <div class="form-group">
+            <label>Sở trường:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="skills" value="Thừa kế web"> Thiết kế web</label>
+                <label><input type="checkbox" name="skills" value="Lập trình web"> Lập trình web</label>
+                <label><input type="checkbox" name="skills" value="Thành thạo tiếng Trung"> Thành thạo tiếng Trung</label>
+            </div>
+        </div>
+
+        <div class="form-group align-top">
+            <label for="description">Mô tả sơ lược:</label>
+            <textarea id="description"></textarea>
+        </div>
+
+        <div class="button-group">
+            <button type="button" class="btn btn-cancel">Hủy bỏ</button>
+            <button type="submit" class="btn btn-submit">Đăng ký</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
